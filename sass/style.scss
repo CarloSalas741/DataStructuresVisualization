@@ -15,14 +15,20 @@
 }
 
 .logo-container{
-    padding-top: 15px;
+    padding-top: 18px;
     padding-left: 10px;
-    flex-basis: 15%;
+    flex-basis: 20%;
+
+    @media screen and (min-width: 1600px) {
+        flex-basis: 15%;
+    }
 }
+
+
 
 .menu-link{
     display: block;
-    padding: 15px 15px;
+    padding: 18px 15px;
 
     &:hover{
         background-color: rgb(214, 124, 20);
@@ -40,19 +46,32 @@
 }
 
 .card-container{
-    height: 50%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+
+    height: 80%;
+    padding: 60px 40px;
+
 }
 
 .card{
-    margin-right: 25px;
-    width: 250px;
-    height: 250px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    height: 280px;
     display: inline-block;
     padding: 8px;
     background-color: rgb(214, 124, 20);
+
+    @media (min-width: 1024px){
+        width: 30%;
+    }
+
+    @media (min-width: 1300px){
+        width: 22%;
+    }
+
+    @media (min-width: 1600px){
+        width: 15%;
+    }
+
     .card-img{
         background-color: rgb(212, 143, 63);
         width: 100%;
@@ -76,3 +95,5 @@
         }
     }
 }
+
+
