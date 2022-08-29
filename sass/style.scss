@@ -1,4 +1,5 @@
 @import "init";
+@import "modules/panel";
 
 .header{
     background-color: #2e2e2e;
@@ -69,7 +70,7 @@
     }
 
     @media (min-width: 1600px){
-        width: 15%;
+        width: 18%;
     }
 
     .card-img{
@@ -97,3 +98,4 @@
 }
 
 
+@import 'stack'

@@ -2,8 +2,8 @@ header.header
     nav.main-nav 
         .logo-container 
             p.logo
-                a(href="index.html") Data Structures Visualization
+                a(href="/index.html") Data Structures Visualization
         ul.main-menu
             each item in menuItems
                 li.menu__item
-                    a.menu-link(href=`${item.toLowerCase().replace(' ',"")}.html`) #{item}
+                    a.menu-link(href=`/pages/${item.toLowerCase().replace(' ',"")}.html`) #{item}
