@@ -12,54 +12,26 @@
     <!-- Main content -->
 
     <section class="main-section">
-        <div class="container">
-            <div class="box">
-                <div>4</div>
-            </div>
-            <div class="box">
-                <div>3</div>
-            </div>
-            <div class="box">
-                <div>7</div>
-            </div>
-            <div class="box">
-                <div>1</div>
-            </div>
-            <div class="box">
-                <div>2</div>
-            </div>
-            <div class="box">
-                <div>8</div>
-            </div>
-            <div class="box">
-                <div>6</div>
-            </div>
-            <div class="box">
-                <div>5</div>
-            </div>
-            <div class="box">
-                <div>6</div>
-            </div>
-            <div class="box">
-                <div>5</div>
-            </div>
+        <div id="container" class="container">
+           
         </div>
 
         <div class="panel">
             <div class="options">
-                <button class="panel-button">Create new</button>
-                <button class="panel-button">Sort</button>
+                <button id="btn-create" class="panel-button">Create new</button>
+                <button id="btn-sort" class="panel-button">Sort</button>
             </div>
 
-           <div class="actions">
-             <button>Random</button>
-             <input type="text">
-             <button>Go</button>
+           <div id="action-panel" class="actions hidden">
+             <button id="btn-create-random">Random</button>
+             <input id="txtElements" type="text" value="1,2,3,4,5">
+             <button id="btn-create-go">Go</button>
            </div>
         </div>
 
     </section>
 
     <script type="module" src="/main.js"></script>
+    <script src="../js/bubblesort.js"></script>
 </body>
 </html>
