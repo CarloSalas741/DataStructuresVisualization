@@ -1,10 +1,11 @@
+import validate from './utilities.js'
 const container = document.getElementById('container');
 const TIMEOUT = 500;
 
-let animationOnCourse = false;
+let animationInProgress = false;
 
 const sort = async (container) =>{
-    animationOnCourse = true;
+    animationInProgress = true;
     let size = container.children.length,
         nodes = [...container.children],
         sorted;
@@ -25,7 +26,7 @@ const sort = async (container) =>{
             }
         }
     }while(sorted);
-    animationOnCourse = false;
+    animationInProgress = false;
     nodes.map(el => {
         el.classList.add('highlight');
     });
@@ -96,7 +97,7 @@ const showActionsPanel =() =>{
 document.getElementById('btn-create').addEventListener('click',showActionsPanel);
 
 document.getElementById('btn-sort').addEventListener('click', ()=>{
-    if(!animationOnCourse){
+    if(!animationInProgress){
         sort(container);
     }
 });
@@ -104,17 +105,33 @@ document.getElementById('btn-sort').addEventListener('click', ()=>{
 document.getElementById('btn-create-random').addEventListener('click',()=>{
     container.replaceChildren('');
     addNodesToContainer(container);
-    animationOnCourse = false;
+    animationInProgress = false;
 });
 
 document.getElementById('btn-create-go').addEventListener('click', ()=>{
-
-    container.replaceChildren('');
     let expression = document.getElementById('txtElements').value;
-    let values = expression.split(',')
-    addNodesToContainer(container,values);
-    animationOnCourse = false;
+    if(validateInput(expression)){
+        container.replaceChildren('');
+        let values = expression.split(',')
+        addNodesToContainer(container,values);
+        animationInProgress = false;
+    }
 });
+
+const validateInput = (string) =>{
+
+    let pattern = /^\d+(,\d+)*$/gm,
+        errorMessage = document.getElementById('error-message');
+
+    if(validate(pattern,string)){   
+        errorMessage.style.opacity  = "0";
+        return true;
+    }else{
+        errorMessage.style.opacity  = "1";
+        return false;
+    }
+
+}
 
 addNodesToContainer(container);
 
