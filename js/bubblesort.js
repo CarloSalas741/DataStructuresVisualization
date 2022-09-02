@@ -124,10 +124,10 @@ const validateInput = (string) =>{
         errorMessage = document.getElementById('error-message');
 
     if(validate(pattern,string)){   
-        errorMessage.style.opacity  = "0";
+        errorMessage.style.display  = "none";
         return true;
     }else{
-        errorMessage.style.opacity  = "1";
+        errorMessage.style.display  = "block";
         return false;
     }
 

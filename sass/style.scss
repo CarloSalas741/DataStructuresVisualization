@@ -41,9 +41,10 @@
 }
 
 
-
 .container{
-    height: 100vh;
+    height: 600px;
+    display: flex;
+    justify-content: center;
 }
 
 .card-container{
@@ -98,4 +99,5 @@
 }
 
 
-@import 'stack'
+@import 'stack';
+@import 'linkedlist';

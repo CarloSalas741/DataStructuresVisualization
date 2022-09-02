@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List</title>
+</head>
+<body>
+     <!-- Header template -->
+     <template data-type="pug" data-src="../pug/header.pug"></template>
+     <!-- Main content -->
+
+     <section class="main-section">
+        <div id="container" class="container list-container">
+        </div>
+
+        <div class="panel">
+            <div id="options" class="options">
+                <button id="btn-create" class="panel-button">Create new</button>
+                <button id="btn-insert" class="panel-button">Insert</button>
+                <button id="btn-remove" class="panel-button">Remove</button>
+            </div>
+
+           <div id="create-action-panel" class="actions hidden">
+             <button id="btn-create-empty">Empty</button>
+             <button id="btn-create-random">Random</button>
+             <input id="txtElements" type="text" value="1,2,3,4,5">
+             <button id="btn-create-go">Go</button>
+             <p id="error-message"> <img src="../assets/images/exclamation.svg" alt=""> There seems to be an invalid element</p>
+           </div>
+
+           <div id="insert-action-panel" class="actions hidden">
+                <div id="append-panel" class="">
+                    <button id="btn-append" class="panel-button">Append</button>
+                    <div id="append-data" class="">
+                        v=<input id="txtValue" type="number" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" value="1">
+                        <button id="btn-append-go">Go</button>
+                    </div>
+                </div>
+                <div id="insert-panel" class="">
+                    <button id="btn-insert" class="panel-button">Insert at</button>
+                    <div id="insert-data" class="">
+                        i=<input id="txtIndex" type="number" value="1">
+                        v=<input id="txtValue" type="number" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" value="1">
+                        <button id="btn-insert-go">Go</button>
+                    </div>
+                </div>
+                <p id="error-message" style="padding-top: 30px"> <img src="../assets/images/exclamation.svg" alt="exclamation icon"> <span></span> </p>
+          </div>
+
+          <div id="remove-action-panel" class="actions hidden">
+                <span style="line-height: 1.8;">i=</span>
+                <input id="txtIndex" type="number" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" value="1">
+                <button id="btn-remove-go">Go</button>
+                <p id="error-message"> <img src="../assets/images/exclamation.svg" alt="exclamation icon"> <span></span></p>
+          </div>
+
+
+        </div>
+
+    </section>
+    <script type="module" src="/main.js"></script>
+    <script type ="module" src="../js/linkedlist.js"></script>
+</body>
+</html>

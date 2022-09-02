@@ -1,0 +1,52 @@
+.node{
+    display: flex;
+    height: 60px;
+}
+
+.element{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 2.7;
+    text-align: center;
+}
+
+.arrow{
+    line-height: 5;
+    overflow: hidden;
+}
+
+.arrow-hidden{
+    position: relative;
+    right: 40px;
+}
+
+.list-container{
+    justify-content: left;
+    padding-left: 100px;
+}
+
+#insert-action-panel{
+    position: absolute;
+    height: 30px;
+    bottom: 38px;
+    left: 100px
+}
+
+#remove-action-panel{
+    position: absolute;
+    height: 30px;
+    bottom: 1px;
+    left: 100px
+}
+
+#txtValue, #txtIndex{
+    width: 80px;
+}
+
+#append-data,#insert-data{
+    background-color: rgb(214, 124, 20);
+    padding: 5px;
+}

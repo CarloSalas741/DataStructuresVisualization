@@ -3,12 +3,6 @@
     padding-top: 100px;
 }
 
-.container{
-    height: 600px;
-    display: flex;
-    justify-content: center;
-}
-
 .box{
 
     width: 100px;
@@ -24,14 +18,10 @@
     background-color: rgb(0, 221, 29);
 }
 
-.hidden{
-    display: none;
-}
-
 #error-message{
     color: red;
     line-height:2;
-    opacity: 0;
+    display: none;
     img{
         position: relative;
         top: 4px;
