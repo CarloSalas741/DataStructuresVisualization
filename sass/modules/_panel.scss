@@ -1,5 +1,6 @@
 .panel{
     display: flex;
+    position: relative;
 }
 
 .options{
@@ -42,4 +43,8 @@
         margin-right: 5px;
         padding: 5px 10px;
     }
+}
+
+.hidden{
+    display: none;
 }
