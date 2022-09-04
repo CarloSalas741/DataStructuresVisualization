@@ -10,7 +10,36 @@
      <!-- Header template -->
      <template data-type="pug" data-src="../pug/header.pug"></template>
      <!-- Main content -->
+     <section class="main-section">
+        <div id="container" class="container list-container">
 
+            <div id="queue-container" class="queue-container">
+                
+            </div>
+        </div>
+
+        <div class="panel">
+            <div id="options" class="options">
+                <button id="btn-create" class="panel-button">Create new</button>
+                <button id="btn-queue" class="panel-button">Push</button>
+                <button id="btn-dequeue" class="panel-button">Pop</button>
+            </div>
+
+           <div id="create-action-panel" class="actions hidden">
+             <button id="btn-create-empty">Empty</button>
+             <button id="btn-create-random">Random</button>
+             <input id="txtElements" type="text" value="1,2,3,4,5">
+             <button id="btn-create-go">Go</button>
+             <p id="error-message"> <img src="../assets/images/exclamation.svg" alt=""> There seems to be an invalid element</p>
+           </div>
+
+           <div id="queue-action-panel" class="actions hidden">
+                v=<input id="txtValue" type="number" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" value="1">
+                <button id="btn-queue-go">Go</button>
+                <p id="error-message"> <img src="../assets/images/exclamation.svg" alt="exclamation icon"> <span></span> </p>
+          </div>
+        </div>
+    </section>
     <script type="module" src="/main.js"></script>
     <script type ="module" src="../js/queue.js"></script>
 </body>
