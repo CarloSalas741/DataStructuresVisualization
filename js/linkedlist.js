@@ -1,4 +1,5 @@
 import validate from "./utilities.js"
+import {TIMEOUT} from "./utilities.js"
 const container = document.getElementById('container');
 
 const appendNode = async value =>{
@@ -65,30 +66,30 @@ const appearAnimation = element =>{
 
 const disappearAnimation = element =>{
     return new Promise(resolve => {
-        element.animate([{transform: "scale(1)"}, {transform: "scale(0)"}],{duration: 500 });
-        setTimeout(() => {resolve()},500)
+        element.animate([{transform: "scale(1)"}, {transform: "scale(0)"}],{duration: TIMEOUT });
+        setTimeout(() => {resolve()},TIMEOUT)
         
     })
 }
 
 const showArrowAnimation = element =>{
     return new Promise(resolve => {
-        element.animate([{transform: "translateX(-40px)"}, {transform: "translateX(0px)"}],{duration: 500 });
+        element.animate([{transform: "translateX(-40px)"}, {transform: "translateX(0px)"}],{duration: TIMEOUT });
         resolve();
     })
 }
 
 const hideArrowAnimation = element =>{
     return new Promise(resolve => {
-        element.animate([{transform: "translate(0px)"},{transform: "translate(-40px)"}],{duration: 500});
-        setTimeout(() => {resolve()},480)
+        element.animate([{transform: "translate(0px)"},{transform: "translate(-40px)"}],{duration: TIMEOUT});
+        setTimeout(() => {resolve()},TIMEOUT - 20)
     })
 }
 
 const displaceAnimation = element =>{
     return new Promise(resolve => {
-        element.animate([{paddingLeft: "0px"},{paddingLeft: "80px"},],{duration: 500})
-        setTimeout(() => {resolve();}, 490)
+        element.animate([{paddingLeft: "0px"},{paddingLeft: "80px"},],{duration: TIMEOUT})
+        setTimeout(() => {resolve();}, TIMEOUT - 10)
    
     });
 }
