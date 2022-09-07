@@ -42,9 +42,15 @@
 
 
 .container{
-    height: 600px;
     display: flex;
     justify-content: center;
+    @media (min-width: 1300px){
+        height: 400px;
+    }
+    @media (min-width: 1600px){
+        height: 600px;
+    }
+ 
 }
 
 .card-container{
