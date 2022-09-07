@@ -41,7 +41,7 @@
                 <div id="insert-panel" class="">
                     <button id="btn-insert" class="panel-button">Insert at</button>
                     <div id="insert-data" class="">
-                        i=<input id="txtIndex" type="number" value="1">
+                        i=<input id="txtIndex" type="number" min="0" value="0">
                         v=<input id="txtValue" type="number" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" value="1">
                         <button id="btn-insert-go">Go</button>
                     </div>
@@ -51,7 +51,7 @@
 
           <div id="remove-action-panel" class="actions hidden">
                 <span style="line-height: 1.8;">i=</span>
-                <input id="txtIndex" type="number" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" value="1">
+                <input id="txtIndex" min="0" type="number" value="0">
                 <button id="btn-remove-go">Go</button>
                 <p id="error-message"> <img src="../assets/images/exclamation.svg" alt="exclamation icon"> <span></span></p>
           </div>

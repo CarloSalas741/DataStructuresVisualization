@@ -1,6 +1,6 @@
 import validate from './utilities.js';
+import {TIMEOUT} from './utilities.js';
 const container = document.getElementById('queue-container');
-const TIMEOUT = 500;
 
 let animationInProgress = false;
 
