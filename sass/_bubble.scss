@@ -1,0 +1,31 @@
+
+.main-section{
+    padding-top: 100px;
+}
+
+.box{
+
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 3;
+    font-size: 32px;
+}
+
+//Code below using for javascript
+.highlight{
+    background-color: rgb(0, 221, 29);
+}
+
+#error-message{
+    color: red;
+    line-height:2;
+    display: none;
+    img{
+        position: relative;
+        top: 4px;
+        width: 20px;
+        height:20px ;
+    }
+}
